@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
+    <contact-footer></contact-footer>
   </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar";
+import ContactFooter from "./components/ContactFooter";
 
 export default {
   name: 'app',
   components: {
-    NavBar
+    NavBar,
+    ContactFooter
   }
 }
 </script>
