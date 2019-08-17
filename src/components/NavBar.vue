@@ -5,7 +5,7 @@
         <div><h3>Home</h3></div>
         <div><h3>About</h3></div>
       </div>
-      <div class="circle"><div id="circleText"><h1>Ross</h1></div></div>
+      <div id="barTitle">Ross</div>
       <div class="buttons">
         <div><h3>Projects</h3></div>
         <div><h3>CV</h3></div>
@@ -22,42 +22,34 @@
 
 <style scoped>
 #bar {
-  height: 50px;
+  height: 100px;
   width: available;
-  background-color: #2c3e50;
+  background-color: white;
   display: flex;
   align-items: center;
-  margin-bottom: 100px;
+  border-bottom: 1px lightgrey solid;
 }
 #nav {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  margin: 5px 50px;
 }
 .buttons {
   width: 20%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto 50px;
-  color: white;
+  color: #2c3e50;
+  font-family: 'Noto Serif', serif;
+  font-size: 18px;
 }
-.circle {
-  width: 400px;
-  height: 200px;
-  background-color: #2c3e50;
-  color: white;
-  border-bottom-left-radius: 200px;
-  border-bottom-right-radius: 200px;
-  transform: translate(0px, 10px);
-  display: flex;
-  align-items: center;
+#barTitle {
+  font-family: 'Lobster Two', cursive;
+  color: palevioletred;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
   justify-content: center;
-}
-#circleText {
-  position: relative;
-  top: 20px;
-  font-size: 30px;
+  line-height: 100px;
 }
 </style>
