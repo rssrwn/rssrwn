@@ -17,7 +17,7 @@
 
 <style scoped>
 #footer {
-  height: 150px;
+  height: 180px;
   width: 100%;
   display: flex;
   align-items: flex-end;

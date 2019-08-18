@@ -40,7 +40,7 @@
   justify-content: space-between;
   align-items: center;
   color: #2c3e50;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   font-weight: bold;
 }
