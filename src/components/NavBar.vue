@@ -42,6 +42,7 @@
   color: #2c3e50;
   font-family: 'Noto Serif', serif;
   font-size: 18px;
+  font-weight: bold;
 }
 #barTitle {
   font-family: 'Lobster Two', cursive;
