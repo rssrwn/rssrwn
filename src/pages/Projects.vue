@@ -18,7 +18,9 @@
       <div class="project">
         <div class="projectTitle"><h2 class="projectTitle">Genetic Search</h2></div>
         <div>
-
+          <p>A library for building and running genetic algorithms and evolutionary strategies.</p>
+          <p>As a brief introduction: a genetic algorithm consists of a population - a set of genotypes, each genotype can be thought of as the encoding of some property. A genetic algorithm's goal is to find the genotype(s) with the highest fitness (this is something which needs to be defined by the user). To do this the algorithm works iteratively; on each iteration it takes some of the fitter genotypes and mutates them in some way, adds these new genotypes to the population and removes genotypes with lower fitness. The algorithm continues to do this until the maximum number of iterations are reached or until some condition is met.</p>
+          <p>This library aims to be highly customisable (yet still user-friendly) and so I decided to represent each genotype as a list of floating point numbers, this allows users to write both evolutionary strategies and traditional genetic algorithms. Each stage in the genetic algorithm cycle can be customised, for example fitness evaluation, mutation, selection, etc. The library provides a number of common operators, rather than the user always having to write their own. The library also makes use of multi-threading; passing off jobs to an executor where operators are applied to individual genotypes.</p>
         </div>
       </div>
       <div class="project">
