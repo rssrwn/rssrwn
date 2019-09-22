@@ -26,7 +26,9 @@
       <div class="project">
         <div class="projectTitle"><h2 class="projectTitle">Genetipher</h2></div>
         <div>
-
+          <p>A tool which uses <b>genetic</b> algorithms to solve substitution <b>ciphers</b> (in fact it uses the genetic search library above).</p>
+          <p>The most interesting part of this project is giving each possible decoding (each genotype) a fitness score. To do this I decode the ciphertext using a genotype, then split the decoded text into tri-grams (sequences of three characters) and score the genotype based on the number of times the tri-grams appear in a pre-processed corpus of English text. This should give a good indication of how closely the decoded text resembles English.</p>
+          <p>At the moment the project can decipher a 230 word message in around 50 seconds, however the English isn't always 100% accurate; sometimes some letters get mixed up. I hope to improve the accuracy and speed of the deciphering in the near future. There are a number of new features I would like to add as well. For example, being able to solve other types of cipher, not just substitution, and being able to search for the correct type of cipher if it is not known beforehand.</p>
         </div>
       </div>
     </div>
@@ -58,6 +60,7 @@
   margin: 5px 0px 10px 0px;
 }
 .projectPicDiv {
+  padding-top: 10px;
   width: 100%;
   display: flex;
   justify-content: center;
