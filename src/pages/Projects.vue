@@ -15,7 +15,18 @@
           </div>
         </div>
       </div>
+      <div class="project">
+        <div class="projectTitle"><h2 class="projectTitle">Genetic Search</h2></div>
+        <div>
 
+        </div>
+      </div>
+      <div class="project">
+        <div class="projectTitle"><h2 class="projectTitle">Genetipher</h2></div>
+        <div>
+
+        </div>
+      </div>
     </div>
   </div>
 </template>
