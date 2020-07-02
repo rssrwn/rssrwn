@@ -1,15 +1,9 @@
 <template>
   <div id="app">
-    <!--<div id="nav">-->
-      <!--<router-link to="/">Home</router-link> |-->
-      <!--<router-link to="/about">About</router-link>-->
-    <!--</div>-->
     <nav-bar></nav-bar>
-    <router-view>
-      <div id="frame">
-        <projects></projects>
-      </div>
-    </router-view>
+    <div id="frame">
+      <router-view></router-view>
+    </div>
     <contact-footer></contact-footer>
   </div>
 </template>
@@ -26,10 +20,9 @@
 }
 </style>
 <script>
-  import Projects from "./views/Projects";
   import ContactFooter from "./components/ContactFooter";
   import NavBar from "./components/NavBar";
   export default {
-    components: {NavBar, ContactFooter, Projects}
+    components: {NavBar, ContactFooter}
   }
 </script>
