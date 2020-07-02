@@ -6,12 +6,20 @@
       </div>
       <div id="childNodes">
         <div class="buttons left">
-          <nav-node name="Home"></nav-node>
-          <nav-node name="About"></nav-node>
+          <router-link to="/">
+            <nav-node name="Home"></nav-node>
+          </router-link>
+          <router-link to="/about">
+            <nav-node name="About"></nav-node>
+          </router-link>
         </div>
         <div class="buttons right">
-          <nav-node name="Projects"></nav-node>
-          <nav-node name="CV"></nav-node>
+          <router-link to="/projects">
+            <nav-node name="Projects"></nav-node>
+          </router-link>
+          <router-link to="cv">
+            <nav-node name="CV"></nav-node>
+          </router-link>
         </div>
       </div>
     </div>

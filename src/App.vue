@@ -1,27 +1,18 @@
 <template>
   <div id="app">
+    <!--<div id="nav">-->
+      <!--<router-link to="/">Home</router-link> |-->
+      <!--<router-link to="/about">About</router-link>-->
+    <!--</div>-->
     <nav-bar></nav-bar>
-    <div id="frame">
-      <projects></projects>
-    </div>
+    <router-view>
+      <div id="frame">
+        <projects></projects>
+      </div>
+    </router-view>
     <contact-footer></contact-footer>
   </div>
 </template>
-
-<script>
-import NavBar from "./components/NavBar";
-import ContactFooter from "./components/ContactFooter";
-import Projects from './pages/Projects'
-
-export default {
-  name: 'app',
-  components: {
-    NavBar,
-    ContactFooter,
-    Projects
-  }
-}
-</script>
 
 <style>
 #app {
@@ -33,15 +24,12 @@ export default {
 #frame {
   margin: 100px 150px;
 }
-
-/*
-font-family: 'Merriweather', serif;
-font-family: 'Lobster', cursive;
-font-family: 'Vollkorn', serif;
-font-family: 'Lobster Two', cursive;
-font-family: 'Alice', serif;
-font-family: 'Press Start 2P', cursive;
-font-family: 'Noto Serif', serif;
-font-family: 'Noto Sans', sans-serif;
-*/
 </style>
+<script>
+  import Projects from "./views/Projects";
+  import ContactFooter from "./components/ContactFooter";
+  import NavBar from "./components/NavBar";
+  export default {
+    components: {NavBar, ContactFooter, Projects}
+  }
+</script>
