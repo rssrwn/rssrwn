@@ -32,19 +32,29 @@
         let cx1 = c1[0];
         let cy1 = c1[1];
 
-        let width = cx2 - cx1;
+        let isToLeft = cx2 > cx1;
+
+        let width = (isToLeft ? cx2 - cx1 : cx1 - cx2);
         let height = cy1 - cy2;
 
         let svg = this.$el.childNodes[1];
-        svg.setAttributeNS(null, "style", "left:"+cx1+"px;top:"+cy2+"px");
+        let line = svg.childNodes[0];
+
         svg.setAttributeNS(null, "width", width);
         svg.setAttributeNS(null, "height", height);
 
-        let line = svg.childNodes[0];
         line.setAttributeNS(null, "x1", "0");
         line.setAttributeNS(null, "x2", width);
-        line.setAttributeNS(null, "y1", height);
-        line.setAttributeNS(null, "y2", "0");
+
+        if (isToLeft) {
+          svg.setAttributeNS(null, "style", "left:"+cx1+"px;top:"+cy2+"px");
+          line.setAttributeNS(null, "y1", height);
+          line.setAttributeNS(null, "y2", "0");
+        } else {
+          svg.setAttributeNS(null, "style", "left:"+cx2+"px;top:"+cy2+"px");
+          line.setAttributeNS(null, "y1", "0");
+          line.setAttributeNS(null, "y2", height);
+        }
       })
     }
   }
