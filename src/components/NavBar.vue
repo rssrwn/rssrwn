@@ -1,29 +1,3 @@
-<!--<template>-->
-  <!--<div id="bar">-->
-    <!--<div id="nav">-->
-      <!--<div class="buttons">-->
-        <!--<div class="circle">-->
-          <!--<div><h3>Home</h3></div>-->
-        <!--</div>-->
-        <!--<div class="circle">-->
-          <!--<div><h3>About</h3></div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="circle large">-->
-        <!--<div id="barTitle">Ross</div>-->
-      <!--</div>-->
-      <!--<div class="buttons">-->
-        <!--<div class="circle">-->
-          <!--<div><h3>Projects</h3></div>-->
-        <!--</div>-->
-        <!--<div class="circle">-->
-          <!--<div><h3>CV</h3></div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</template>-->
-
 <template>
   <div id="bar">
     <div id="nav">
@@ -32,9 +6,12 @@
       </div>
       <div id="childNodes">
         <div class="buttons left">
-          <div class="circle">
-            <div>Home</div>
+          <div class="circle" id="homeCircle">
+            <div class="circleText">Home</div>
           </div>
+          <svg style="" height="0" width="0" class="svg" id="homeSvg">
+            <line class="line" id="homeLine" x1="0" y1="0" x2="0" y2="0"></line>
+          </svg>
           <div class="circle">
             <div>About</div>
           </div>
@@ -53,8 +30,42 @@
 </template>
 
 <script>
+  function centreOf(elem) {
+    var cx = (elem.offsetWidth / 2) + elem.offsetLeft;
+    var cy = (elem.offsetHeight / 2) + elem.offsetTop;
+    return [cx, cy];
+  }
+
   export default {
-    name: "nav-bar"
+    name: "nav-bar",
+
+    mounted: function() {
+      this.$nextTick(function() {
+        var mainButton = this.$el.childNodes[0].childNodes[0];
+        var c2 = centreOf(mainButton);
+        var cx2 = c2[0];
+        var cy2 = c2[1];
+
+        var homeCircle = document.getElementById("homeCircle");
+        var c1 = centreOf(homeCircle);
+        var cx1 = c1[0];
+        var cy1 = c1[1];
+
+        var width = cx2 - cx1;
+        var height = cy1 - cy2;
+
+        var svg = document.getElementById("homeSvg");
+        svg.setAttributeNS(null, "style", "left:"+cx1+"px;top:"+cy2+"px");
+        svg.setAttributeNS(null, "width", width);
+        svg.setAttributeNS(null, "height", height);
+
+        var line = document.getElementById("homeLine");
+        line.setAttributeNS(null, "x1", 0);
+        line.setAttributeNS(null, "x2", width);
+        line.setAttributeNS(null, "y1", height);
+        line.setAttributeNS(null, "y2", 0);
+      })
+    }
   }
 </script>
 
@@ -94,7 +105,6 @@
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-  /*margin: 0px 80px;*/
 }
 .buttons.left {
   margin-right: 120px;
@@ -111,10 +121,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
+  z-index: 1;
+  position: relative;
 }
 .circle.large {
   height: 300px;
   width: 300px;
+  background-color: whitesmoke;
+  z-index: 1;
+}
+
+.circleText {
+  z-index: 2;
 }
 
 #barTitle {
@@ -122,5 +141,16 @@
   color: palevioletred;
   font-size: 60px;
   font-weight: bold;
+}
+
+.svg {
+  position: absolute;
+  z-index: 0;
+}
+
+.line {
+  stroke: #2c3e50;
+  stroke-width: 3px;
+  z-index: 0;
 }
 </style>
