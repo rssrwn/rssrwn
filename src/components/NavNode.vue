@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="circleContainer">
     <div class="circle">
       <div class="circleText">{{ name }}</div>
     </div>
@@ -87,5 +87,15 @@
     stroke: #2c3e50;
     stroke-width: 3px;
     z-index: 0;
+  }
+
+  .circleContainer:hover > .circle:hover {
+    color: whitesmoke;
+    background-color: #2c3e50;
+  }
+
+  .router-link-active > .circleContainer:hover > .circle:hover {
+    color: palevioletred;
+    background-color: #2c3e50;
   }
 </style>

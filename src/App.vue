@@ -8,6 +8,14 @@
   </div>
 </template>
 
+<script>
+  import ContactFooter from "./components/ContactFooter";
+  import NavBar from "./components/NavBar";
+  export default {
+    components: {NavBar, ContactFooter}
+  }
+</script>
+
 <style>
 #app {
   font-family: Nunito, sans-serif;
@@ -19,10 +27,3 @@
   margin: 100px 150px;
 }
 </style>
-<script>
-  import ContactFooter from "./components/ContactFooter";
-  import NavBar from "./components/NavBar";
-  export default {
-    components: {NavBar, ContactFooter}
-  }
-</script>

@@ -1,12 +1,14 @@
 <template>
   <div id="bar">
     <div id="nav">
-      <div id="mainButton" class="circle large">
-        <div id="barTitle">Ross</div>
-      </div>
+      <router-link to="/" exact>
+        <div id="mainButton" class="circle large">
+          <div id="barTitle">Ross</div>
+        </div>
+      </router-link>
       <div id="childNodes">
         <div class="buttons left">
-          <router-link to="/">
+          <router-link to="/" exact>
             <nav-node name="Home"></nav-node>
           </router-link>
           <router-link to="/about">
@@ -104,5 +106,19 @@
   font-size: 60px;
   font-weight: bold;
   margin-top: 100px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.circle:hover {
+  color: whitesmoke;
+  background-color: #2c3e50;
+}
+
+.router-link-active {
+  color: palevioletred !important;
 }
 </style>
