@@ -1,6 +1,5 @@
 <template>
   <div id="page">
-    <h2 class="subTitle">Projects</h2>
     <div id="projects">
       <div class="project">
         <div class="projectTitle"><h2 class="projectTitle">EduBot</h2></div>
@@ -42,17 +41,8 @@
 </script>
 
 <style scoped>
-.subTitle {
-  /*font-family: 'Merriweather', serif;*/
-  font-family: Oswald, sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  border-bottom: 1px lightgrey solid;
-  color: palevioletred;
-}
 .project {
-  /*font-family: 'Merriweather', serif;*/
-  border: 1px lightgrey solid;
+  border: 1px #2c3e50 solid;
   font-family: Nunito, sans-serif;
   border-radius: 10px;
   padding: 20px;

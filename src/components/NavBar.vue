@@ -38,7 +38,7 @@
 #nav {
   display: inline;
   width: 100%;
-  margin-top: -100px;
+  margin-top: -150px;
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -55,7 +55,7 @@
   font-family: Oswald, sans-serif;
   font-size: 28px;
   width:100%;
-  margin-top: -80px;
+  margin-top: -100px;
 }
 
 .buttons {
@@ -95,5 +95,6 @@
   color: palevioletred;
   font-size: 60px;
   font-weight: bold;
+  margin-top: 100px;
 }
 </style>
