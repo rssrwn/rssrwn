@@ -6,23 +6,27 @@
       </div>
       <div id="childNodes">
         <div class="buttons left">
-          <div class="circle" id="homeCircle">
-            <div class="circleText">Home</div>
-          </div>
-          <svg style="" height="0" width="0" class="svg" id="homeSvg">
-            <line class="line" id="homeLine" x1="0" y1="0" x2="0" y2="0"></line>
-          </svg>
-          <div class="circle">
-            <div>About</div>
-          </div>
+          <!--<div class="circle" id="homeCircle">-->
+            <!--<div class="circleText">Home</div>-->
+          <!--</div>-->
+          <!--<svg style="" height="0" width="0" class="svg" id="homeSvg">-->
+            <!--<line class="line" id="homeLine" x1="0" y1="0" x2="0" y2="0"></line>-->
+          <!--</svg>-->
+          <nav-node name="Home"></nav-node>
+          <!--<div class="circle">-->
+            <!--<div>About</div>-->
+          <!--</div>-->
+          <nav-node name="About"></nav-node>
         </div>
         <div class="buttons right">
-          <div class="circle">
-            <div>Projects</div>
-          </div>
-          <div class="circle">
-            <div>CV</div>
-          </div>
+          <!--<div class="circle">-->
+            <!--<div>Projects</div>-->
+          <!--</div>-->
+          <nav-node name="Projects"></nav-node>
+          <!--<div class="circle">-->
+            <!--<div>CV</div>-->
+          <!--</div>-->
+          <nav-node name="CV"></nav-node>
         </div>
       </div>
     </div>
@@ -30,6 +34,8 @@
 </template>
 
 <script>
+  import NavNode from "./NavNode";
+
   function centreOf(elem) {
     var cx = (elem.offsetWidth / 2) + elem.offsetLeft;
     var cy = (elem.offsetHeight / 2) + elem.offsetTop;
@@ -38,7 +44,7 @@
 
   export default {
     name: "nav-bar",
-
+    components: {NavNode},
     mounted: function() {
       this.$nextTick(function() {
         var mainButton = this.$el.childNodes[0].childNodes[0];
