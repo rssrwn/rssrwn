@@ -21,8 +21,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  background-color: #f5f5f5;
-  padding: 0px 100px;
+  background-color: whitesmoke;
+  padding: 0px 80px;
 }
 #footerHeader {
   font-family: 'Lobster Two', cursive;

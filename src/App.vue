@@ -31,7 +31,7 @@ export default {
   color: #2c3e50;
 }
 #frame {
-  margin: 100px 100px;
+  margin: 100px 150px;
 }
 
 /*
