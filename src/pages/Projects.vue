@@ -50,6 +50,7 @@
   color: palevioletred;
 }
 .project {
+  font-family: 'Merriweather', serif;
   border: 1px lightgrey solid;
   border-radius: 10px;
   padding: 20px;
@@ -67,6 +68,7 @@
 }
 .projectPic {
   width: 75%;
+  height: 75%;
   border: 1px lightgrey solid;
   border-radius: 5px;
 }
